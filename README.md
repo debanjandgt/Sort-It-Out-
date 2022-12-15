@@ -1,5 +1,5 @@
-# Sorting Visualization
-### This is a simple visualization project made using javascript 
+# Sort It Out!
+### A One Stop To Learn And Visualize The Working Of Some of the most common Sorting Algorithms.
 - Bubble Sort 
 - Selection Sort
 - Insertion Sort
@@ -10,6 +10,3 @@
 
 [Check out the website here](https://debanjandgt-sort-it-out.netlify.app/)
 
-<img src="img/img1.png"> <br/>
-<img src="img/img2.png"> <br/>
-<img src="img/img3.png"> <br/>
