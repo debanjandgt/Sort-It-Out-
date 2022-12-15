@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image.jpeg" type="image/jpeg" >
+    <title>Bubble Sort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<header>
+ 
+    <h1>Bubble Sort</h1>
+    <nav>
+        <p>The bubble sort algorithm sorts an array by repeatedly finding the maximum element from the unsorted part and putting it at the end. 
+            The algorithm maintains two subarrays in a given array.
+           <br> •	The subarray which already sorted. 
+           <br> •	The remaining subarray was unsorted.
+           <br> In every iteration of the bubble sort, the maximum element from the unsorted subarray is picked and moved to the sorted subarray. 
+            The time Complexity of this algorithm is O(N*N) in best case, average case and worst case.
+          <br> <p>Time Complexity Of The Algorithm : <strong> O(N*N)</strong> </p> 
+          <p> Space Complexity Of The Algorithm is : <strong> O(1)</strong></p>
+          
+        
+        
+        <deckgo-highlight-code language="css">
+            <code slot="code">
+import java.util.*;
+class BubbleSort {
+    static void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arr[j] > arr[j + 1]) {
+                    // swap arr[j+1] and arr[j]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+    }
+ 
+    /* Prints the array */
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+ 
+    // Driver method to test above
+    public static void main(String args[])
+    {
+        int arr[] = { 5, 1, 4, 2, 8 };
+        bubbleSort(arr);
+        System.out.println("Sorted array");
+        printArray(arr);
+    }
+}
+            </code>
+        </deckgo-highlight-code>
+        <div class="row">
+
+            <div class="col" id="newArray">
+                <button type="button" class="btn btn-outline-success btn-light newArray">Randomize the Array</button>
+            </div>
+
+            <div class="col" id="input">
+                <span id="size" style="color: aliceblue;">Size
+                    <input id="arr_sz" type="range" min="5" max="100" step=1 value=60>
+                </span>
+                <span id="speed" style="color: aliceblue;">Speed
+                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
+            </div>
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-success btn-light bubblesortitem" style="width: 200px;">Sort the Array</button>
+            </div>
+            
+            
+        </div>
+    </nav>
+</header>
+<body class="p-3 mb-2 bg-light">
+    <br>
+    
+    <br>
+    <div id="bars" class="flex-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_files/sorting.js"></script>
+    <script src="js_files/bubble.js"></script>
+</body>
+</html>

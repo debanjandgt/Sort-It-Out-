@@ -1,0 +1,235 @@
+.front-page{
+    padding: 270px;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px
+}
+h1{
+    font-family:Impact;
+    background-image:linear-gradient(90deg,#000,#fefefe,#000);
+    background-size: 80% 100%;
+    background-repeat:no-repeat;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    text-transform:uppercase;
+    animation:shine 4s linear infinite;
+  }
+  
+  @keyframes shine{
+    from{
+      background-position: -500% 0;
+    }
+    
+    to{
+      background-position: 500% 0;
+    }
+  }
+@font-face {
+    font-family: "Copper";
+    src: url("./Copperplate\ Gothic\ Bold\ Regular.ttf");
+}
+@font-face {
+    font-family:"Roboto" ;
+    src: url("./Roboto-Regular.ttf");
+}
+body{
+    background-image: url("./bubble-bg.jpg");
+}
+h1{
+    color: aliceblue;
+    font-family: "Copper";
+    background-image:linear-gradient(90deg,#000,#fefefe,#000);
+    background-size: 80% 100%;
+    background-repeat:no-repeat;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    text-transform:uppercase;
+    animation:shine 4s linear infinite;  
+}
+@keyframes shine{
+    from{
+      background-position: -500% 0;
+    }
+    
+    to{
+      background-position: 500% 0;
+    }
+  }
+button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:active {
+    color: #000
+}
+button:active:after {
+    background: transparent;
+}
+button:before {
+    opacity: 1;
+}
+button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#speed_input {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #000;
+    outline: none;
+    border: 5px solid lawngreen;
+    border-radius: 8px;
+  }
+  
+  
+  /* for chrome/safari */
+ #speed_input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 60px;
+    background: #000;
+    cursor: pointer;
+    border: 5px solid lawngreen;
+    border-radius: 4px;
+  }
+  #arr_sz{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #000;
+    outline: none;
+    border: 5px solid lawngreen;
+    border-radius: 8px;
+  }
+  #arr_sz::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 60px;
+    background: #000;
+    cursor: pointer;
+    border: 5px solid lawngreen;
+    border-radius: 4px;
+  }
+  
+
+  
+  /* for firefox */
+ 
+
+
+
+p{
+    color: aliceblue;
+    font-family: "Roboto";
+    font-size: 24px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0 20px 30px 0;
+    line-height: 1.4;
+}
+.flex-container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 85%;
+    height: 500px;
+    justify-content: center;
+    margin-left: 105px;
+    margin-top: -10px;
+    transition: 2s all ease;
+    flex-direction: row;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+p{
+    display: flex;
+    max-width: 85%;
+    margin-left: 110px;
+    justify-content: center;
+    align-content: center;
+}
+.flex-item{
+    background: red;
+    border: 1pt solid black;
+    width: 15px;
+    transition: 0.1s all ease;
+    margin-top: auto;
+}
+
+.row{
+    display: flex;
+}
+
+#input{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+}
+
+.col{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+deckgo-highlight-code{
+    width: 1000px;
+    margin-left: 250px;
+}
